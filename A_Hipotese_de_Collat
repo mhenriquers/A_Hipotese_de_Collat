@@ -1,0 +1,27 @@
+while True:
+    # pegue qualquer número inteiro  e nomeie-o como c0;
+    numero = input('Digite um numero ou digite "sair" \n')
+
+    if numero == 'sair':
+        break
+
+    # diferente de zero
+    try:
+        c0 = int(numero)
+    except ValueError:
+        print('Entre com um numero')
+    contador = 0
+    # se for par, avalie um novo c0 como c0 ÷ 2;
+    while c0 != 1:
+        if c0 % 2 == 0:
+            c0 = c0 / 2
+            contador += 1
+            print(c0)
+    # caso contrário, se for ímpar, avalie um novo c0 como 3 × c0 + 1;
+        elif c0 % 2 != 0:
+            c0 = c0 * 3 + 1
+            contador += 1
+            print(c0)
+
+    # se c0 ≠ 1 , volte ao ponto 2.
+    print(f'foram {contador} etapas')
